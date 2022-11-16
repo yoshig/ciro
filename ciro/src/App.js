@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import { useState } from 'react';
+import Notification from './components/Notification.tsx';
+
+const notificationsApi = "https://turing-hopper.herokuapp.com/api/notifications/ac6afe60-46d0-4f5a-9f5a-2eb9e26cbd9f";
 
 function App() {
+  const [notifications, setNotifications] = useState([]);
+
+  const fetchNotications = async () => {
+    const response = await axios.get(notificationsApi);
+    setNotifications(response.data);
+  }
+
+  fetchNotications();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {
+        notifications.map((nofication) => {
+          return <Notification key={nofication.id} notification={nofication} />
+        })
+      }
     </div>
   );
 }
