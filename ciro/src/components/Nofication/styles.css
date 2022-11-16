@@ -1,5 +1,7 @@
 .notificationContainer {
   padding: 20px;
+  box-shadow: 0px 5px 5px lightgray;
+  margin: 20px;
 }
 
 .notificationHeader {
@@ -19,4 +21,12 @@
 .boldText {
   font-weight: 700;
   color: gray;
+}
+
+.notificationSource {
+  font-size: 14px;
+}
+
+img {
+  margin-right: 5px;
 }
