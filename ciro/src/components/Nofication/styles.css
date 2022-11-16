@@ -1,0 +1,22 @@
+.notificationContainer {
+  padding: 20px;
+}
+
+.notificationHeader {
+  padding-bottom: 5px;
+  border-bottom: 1px solid gray;
+}
+
+.notificationBody {
+  padding-top: 10px;
+}
+
+.notificationContactContainer {
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.boldText {
+  font-weight: 700;
+  color: gray;
+}

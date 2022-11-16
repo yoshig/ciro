@@ -1,7 +1,7 @@
 import './App.css';
 import axios from 'axios';
 import { useState } from 'react';
-import Notification from './components/Notification.tsx';
+import Notification from './components/Nofication/index.tsx';
 
 const notificationsApi = "https://turing-hopper.herokuapp.com/api/notifications/ac6afe60-46d0-4f5a-9f5a-2eb9e26cbd9f";
 
