@@ -13,7 +13,6 @@ function App() {
     setNotifications(response.data);
   }
   useEffect(() => {
-    console.log("SWHATAFS")
     fetchNotications();
   }, [])
 
